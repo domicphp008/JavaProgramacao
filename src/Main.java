@@ -1,27 +1,26 @@
+package curso;
 
 import java.util.Locale;
-public class Main {
+import java.util.Scanner;
 
+class Main {
 	public static void main(String[] args) {
+
+		Locale.setDefault(Locale.US);
+		Scanner sc = new Scanner(System.in);
+		int mask = 0b100000;
+		int n = sc.nextInt();
+		
+		if ((n & mask) != 0 ) {
+			
+			System.out.println("6th bit is true!");
+		}
+		else {
+			System.out.println("6th bit is false");
+		}
 		
 		
-			String nome = "José ";
-			int idade = 34;
-			double renda = 4000.0;
-			double x = 10.34784;
-			
-			System.out.println(x);
-			System.out.printf("%.1f%n", x);
-			System.out.printf("%.2f%n", x);
-			System.out.printf("%.3f%n", x);
-			System.out.printf("%.4f%n", x);
-			Locale.setDefault(Locale.US);
-			System.out.printf("%.4f%n", x);
-			
-			System.out.println("Olá Mundo!");
-			System.out.printf("RESULTADO = " + x + " METROS ");
-			System.out.printf("RESULTADO = %2f metros%n", x);
-			System.out.printf("%s tem %d anos e ganha R$ %.2f reais%n", nome, idade, renda);
+		sc.close();
 	}
 
 }
